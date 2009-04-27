@@ -1,13 +1,22 @@
 I18nInPlaceEdit
 ===============
 
-Introduction goes here.
+This plugin is meant to make translating your quick and simple through in place edit. The javascript for this has been adopted from http://github.com/nakajima/nakatype/wikis/better-edit-in-place-translateable-js . Small changes have been made to make it work for changing language strings inline.
 
 
-Example
+Installation
 =======
 
-Example goes here.
+script/plugin install git://github.com/jeroenvandijk/i18n_in_place_edit.git 
+
+Put this in the <head> of your application layout:
+<%= include_in_place_edit_for_translations %>
+
+When you want to activate translation mode you have to set the environment variable TRANSLATION_MODE to 1. Using mongrel you would start your server as follows:
+
+export TRANSLATION_MODE=1 && script/server
+
+Missing translation string will have the color red and already translated string have the color green. The yaml in which all the translations are saved is located in config/locales and is named 'zzz-nl-in_place_edit.yml'. The zzz is used as prefix to make sure your added translations override older translations.
 
 
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
+Copyright (c) 2009 [Jeroen van Dijk], released under the MIT license
