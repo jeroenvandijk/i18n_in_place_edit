@@ -1,0 +1,9 @@
+.translateable {
+	color : white;
+	background-color : green;
+}
+
+.translation_missing.translateable {
+	color : white;
+	background-color : red;
+}
